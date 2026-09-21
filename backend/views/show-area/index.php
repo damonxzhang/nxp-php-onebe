@@ -1,0 +1,118 @@
+<?php
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>区域平面图</title>
+    <link rel="stylesheet" href="./css/area.css" />
+  </head>
+  <body>
+    <div class="lsq_contanier">
+      <!-- 解冻区 -->
+      <div class="thawarea">
+        <div class="thawcontent">
+          <div class="thawlist">
+            <ul id="thawdata">
+              <li>
+                <img src="./image/jdq.png" />
+              </li>
+              <li><img src="./image/jdq.png" /></li>
+              <li><img src="./image/jdq.png" /></li>
+              <li><img src="./image/jdq.png" /></li>
+              <li><img src="./image/jdq.png" /></li>
+            </ul>
+          </div>
+          <div class="thawname">
+            <img src="./image/font_jdq.png" />
+          </div>
+        </div>
+      </div>
+      <!-- 空闲区 -->
+      <div class="freearea">
+        <div class="freecontent">
+          <div class="freename">
+            <img src="./image/font_kxq.png" />
+          </div>
+          <div class="freelist">
+            <ul id="freeaData">
+              <li><img src="./image/kxq.png" /></li>
+              <li><img src="./image/kxq.png" /></li>
+              <li><img src="./image/kxq.png" /></li>
+              <li><img src="./image/kxq.png" /></li>
+              <li><img src="./image/kxq.png" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon_dn">
+        <img src="./image/icon_dn.png" />
+      </div>
+      <div class="dn">
+        <img src="./image/dn.png" />
+      </div>
+      <div class="lzcontent">
+        <img src="./image/lz.png" alt="" />
+      </div>
+      <div class="lsq_footer">
+        <div class="lsqcontent">
+          <div class="lqqname">
+            <img src="./image/font_lqqq.png" />
+          </div>
+          <ul id="lsqdata">
+            <li>
+              <span class="lqqtitle">Y1</span>
+              <img src="./image/lqqq.png" />
+            </li>
+          </ul>
+        </div>
+        <div class="footercenter">
+          <div class="lqqname">
+            <img src="./image/font_lqq.png" alt="" />
+          </div>
+          <ul id="lqqdata">
+            <li>
+              <span class="lqqtitle">G5</span>
+              <img src="./image/lqq.png" />
+            </li>
+            <li>
+              <span class="lqqtitle">G4</span>
+              <img src="./image/lqq.png" />
+            </li>
+            <li>
+              <span class="lqqtitle">G3</span>
+              <img src="./image/lqq.png" />
+            </li>
+            <li>
+              <span class="lqqtitle">G2</span>
+              <img src="./image/lqq.png" />
+            </li>
+            <li>
+              <span class="lqqtitle">G1</span>
+              <img src="./image/lqq.png" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="zwcdcontent">
+          <div class="lqqname">
+            <img src="./image/font_zwcd.png" />
+          </div>
+          <ul>
+            <li>
+              <img src="./image/zwcd.png" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/area.js"></script>
+</html>

@@ -1,0 +1,190 @@
+body,
+html {
+  background-color: #25293e;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contanier {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("../image/bg.png") no-repeat;
+  background-size: cover;
+  padding-left: 2.7083333333vw;
+  padding-right: 2.7083333333vw;
+  padding-top: 2.7777777778vh;
+  padding-bottom: 4.6296296296vh;
+  color: #ffffff;
+}
+.contanier .header {
+  height: 8.3333333333vh;
+  font-size: 3.3333333333vh;
+  font-family: eryazhenyuanjian;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+.contanier .header img {
+  height: 4.6296296296vh;
+  width: 11.8518518519vh;
+  padding-left: 2.7083333333vw;
+  float: left;
+}
+.contanier .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: calc(100% - 17.5925925926vh);
+}
+.contanier .content .goods {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  margin-right: 2.6041666667vw;
+}
+.contanier .content .goods:last-of-type {
+  margin-right: 0;
+}
+.contanier .content .shelfNo {
+  font-size: 1.8518518519vh;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #ffffff;
+}
+.contanier .content .gooddoor {
+  width: 100%;
+  height: 9.6296296296vh;
+  background-color: #54537b;
+  border-radius: 8px;
+  margin-top: 2.2222222222vh;
+  position: relative;
+}
+.contanier .content .gooddoor .progress {
+  border-radius: 8px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #54537b;
+}
+.contanier .content .gooddoor .vline {
+  width: 0.3125vw;
+  height: 3.7037037037vh;
+  background: #25273c;
+  -webkit-box-shadow: 0px 0px 0.15625vw 0.15625vw rgba(6, 0, 1, 0.81);
+          box-shadow: 0px 0px 0.15625vw 0.15625vw rgba(6, 0, 1, 0.81);
+  border-radius: 0.15625vw;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.8518518519vh;
+  right: 0.5208333333vw;
+  z-index: 10;
+}
+.contanier .content .gooddoor .stockno {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 0.9895833333vw);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.9895833333vw;
+  color: #ffffff;
+  font-size: 1.4814814815vh;
+  z-index: 100;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.contanier .content .klq .progress {
+  background: -webkit-gradient(linear, right top, left top, from(#51cc93), to(#87ff8e));
+  background: -o-linear-gradient(right, #51cc93, #87ff8e);
+  background: linear-gradient(-90deg, #51cc93, #87ff8e);
+}
+.contanier .content .ygq .progress {
+  background: -webkit-gradient(linear, right top, left top, from(#ff6e5f), to(#e54d48));
+  background: -o-linear-gradient(right, #ff6e5f, #e54d48);
+  background: linear-gradient(-90deg, #ff6e5f, #e54d48);
+}
+.contanier .content .jjgq .progress {
+  background: -webkit-gradient(linear, right top, left top, from(#fea71a), to(#fa6658));
+  background: -o-linear-gradient(right, #fea71a, #fa6658);
+  background: linear-gradient(-90deg, #fea71a, #fa6658);
+}
+.contanier .content .zzlq .progress {
+  border-radius: 8px;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background: -webkit-gradient(linear, right top, left top, from(#51cc93), to(#87ff8e));
+  background: -o-linear-gradient(right, #51cc93, #87ff8e);
+  background: linear-gradient(-90deg, #51cc93, #87ff8e);
+}
+.contanier .content .zzlq .goodinfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  font-size: 1.8518518519vh;
+}
+.contanier .content .zzlq .goodinfo .goodnum {
+  word-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: center;
+  z-index: 15;
+}
+.contanier .footer {
+  height: 9.2592592593vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contanier .footer img {
+  width: 5.2083333333vw;
+  height: 3.8888888889vh;
+  margin-right: 0.5208333333vw;
+}
+.contanier .footer span {
+  font-size: 1.8518518519vh;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #f6f8fd;
+  margin-right: 3.6458333333vw;
+}
+.contanier .footer span:last-of-type {
+  margin-right: 0;
+}

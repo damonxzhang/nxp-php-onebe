@@ -1,0 +1,170 @@
+@import "./common.scss";
+$body-color: #25293e;
+$font-color: #ffffff;
+$default-door-color: #54537b;
+body,
+html {
+  background-color: $body-color;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.contanier {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: url("../image/bg.png") no-repeat;
+  background-size: cover;
+  padding: {
+    left: vw(52);
+    right: vw(52);
+    top: vh(30);
+    bottom: vh(50);
+  }
+  color: $font-color;
+  .header {
+    height: vh(90);
+    font-size: vh(50);
+    font-family: eryazhenyuanjian;
+    font-weight: 400;
+    color: $font-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      height: vh(70);
+      width: vh(180);
+      position: absolute;
+      left: vw(52);
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    $h: vh(90) + vh(100);
+    height: calc(100% - #{$h});
+    .goods {
+      flex: 1;
+      overflow: hidden;
+      margin-right: vw(50);
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    .shelfNo {
+      font-size: vh(20);
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: $font-color;
+    }
+    .gooddoor {
+      width: 100%;
+      height: vh(104);
+      background-color: $default-door-color;
+      border-radius: 8px;
+      margin-top: vh(24);
+      position: relative;
+      .progress {
+        border-radius: 8px;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: $default-door-color;
+      }
+      .vline {
+        width: vw(6);
+        height: vh(40);
+        background: #25273c;
+        box-shadow: 0px 0px vw(3) vw(3) rgba(6, 0, 1, 0.81);
+        border-radius: vw(3);
+        position: absolute;
+        top: 50%;
+        margin-top: vh(-20);
+        right: vw(10);
+        z-index: 10;
+      }
+      .stockno {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - vw(19));
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: vw(19);
+        color: $font-color;
+        font-size: vh(16);
+        z-index: 100;
+        box-sizing: content-box;
+      }
+    }
+    .klq {
+      .progress {
+        background: linear-gradient(-90deg, #51cc93, #87ff8e);
+      }
+    }
+    .ygq {
+      .progress {
+        background: linear-gradient(-90deg, #ff6e5f, #e54d48);
+      }
+    }
+    .jjgq {
+      .progress {
+        background: linear-gradient(-90deg, #fea71a, #fa6658);
+      }
+    }
+    .zzlq {
+      .progress {
+        border-radius: 8px;
+        position: relative;
+        height: 100%;
+        // width: 80%;
+        background: linear-gradient(-90deg, #51cc93, #87ff8e);
+      }
+      .goodinfo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        font-size: vh(20);
+        .goodnum {
+          word-wrap: break-word;
+          word-break: break-all;
+          word-wrap: break-word;
+          white-space: pre-wrap;
+          text-align: center;
+          z-index: 15;
+        }
+      }
+    }
+  }
+  .footer {
+    height: vh(100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: vw(100);
+      height: vh(42);
+      margin-right: vw(10);
+    }
+    span {
+      font-size: vh(20);
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: #f6f8fd;
+      margin-right: vw(70);
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

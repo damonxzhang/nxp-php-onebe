@@ -1,0 +1,71 @@
+<?php
+
+use backend\models\MachineCheck;
+use yii\helpers\ArrayHelper;
+use backend\models\UserInfo;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use backend\models\Facility;
+
+/* @var $this yii\web\View */
+/* @var $searchModel backend\models\search\MachineModelSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+?>
+<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">5S</a>
+        <a href="javascript:;">
+          <cite>白班检查</cite>
+        </a>
+      </span>
+</div>
+<div class="x-body">
+    <div class="layui-row">
+        <form class="layui-form layui-col-md12 x-so">
+            <div class="layui-input-inline">
+                <?= Html::dropDownList('area', ArrayHelper::getValue($request, 'area'), ArrayHelper::merge(['' => '区域'], UserInfo::$areaArr), ['name' => 'area']); ?>
+            </div>
+            <div class="layui-input-inline">
+                <?= Html::dropDownList('process', ArrayHelper::getValue($request, 'process'), ArrayHelper::merge(['' => '工序'], Facility::$processList), ['name' => 'process']); ?>
+            </div>
+            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>查询</button>
+            <button class="layui-btn" type="button" onclick="location.href= '<?= Url::to([$this->context->id . '/index'])?>'" >
+                <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>刷新
+            </button>
+        </form>
+    </div>
+    <xblock style="height: 29px">
+        <span class="x-right" style="line-height:30px">共有数据：<span class="count_num"><?= $pagination->totalCount ?></span> 条 ( <?= $pagination->getPageCount() ?> 页 )</span>
+    </xblock>
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>区域</th>
+            <th>工序</th>
+            <th>设备</th>
+            <th>班别</th>
+            <th>状态</th>
+            <th>检查时间</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        <?php foreach ($dataProvider as $list): ?>
+            <tr>
+                <td><?= $list['id'] ?></td>
+                <td><?= ArrayHelper::getValue(UserInfo::$areaArr, $list['area'],'') ?></td>
+                <td><?= ArrayHelper::getValue(Facility::$processList, $list['process'],'') ?></td>
+                <td><?= $list['number'] ?></td>
+                <td><?= ArrayHelper::getValue(MachineCheck::$classList, $list['class'],'') ?></td>
+                <td><?= ArrayHelper::getValue(MachineCheck::$statusList, $list['status'],'') ?></td>
+                <td><?= $list['check_time'] ?></td>
+                <td class="td-manage">
+                    <button type="button" class="layui-btn layui-btn-xs" onclick="x_admin_full('检查','<?= Url::to([$this->context->id . '/detail', 'id' => $list['id']]) ?>')"><i class="layui-icon">&#xe63c;</i>检查</button>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?= $this->render('@app/views/layouts/pagination', compact('pagination')) ?>
+</div>

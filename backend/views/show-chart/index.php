@@ -1,0 +1,92 @@
+<?php
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./icon/iconfont.css" /> -->
+    <link rel="stylesheet" href="./css/lagescreen.css" />
+    <title>可视化大屏</title>
+  </head>
+  <body>
+    <div class="container-header">
+      <ul class="nowTime">
+        <li></li>
+        <li></li>
+      </ul>
+      <h3>恩智浦Compound数据大屏</h3>
+    </div>
+
+    <div class="container-content">
+      <div class="count-base">
+        <div class="com-count-title">12小时即将过期物料【单位：袋】</div>
+        <div class="com-screen-content">
+          <div id="main1" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+      <div class="count-topic e1">
+        <div class="com-count-title">库存情况【by device】【单位：袋】</div>
+        <div class="com-screen-content">
+          <div id="main2" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+      <div class="count-topic e2">
+        <div class="com-count-title">库存情况【by 状态】【单位：袋】</div>
+        <div class="com-screen-content">
+          <div id="main3" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+      <div class="count-topic e2">
+        <div class="com-count-title">下架情况【单位：磅】</div>
+        <div class="com-screen-content">
+          <div id="main4" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+
+      <div class="count-topic e2">
+        <div class="com-count-title">零散报废情况【单位：磅】</div>
+        <div class="com-screen-content">
+          <div id="main5" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+      <div class="count-topic e2">
+        <div class="com-count-title">上架情况【单位：磅】</div>
+        <div class="com-screen-content">
+          <div id="main6" style="width: 100%; height: 100%"></div>
+        </div>
+        <span class="left-top"></span>
+        <span class="right-top"></span>
+        <span class="left-bottom"></span>
+        <span class="right-bottom"></span>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/lagescreen.js"></script>
+  </body>
+</html>

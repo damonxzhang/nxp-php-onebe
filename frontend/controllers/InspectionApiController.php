@@ -1148,7 +1148,7 @@ class InspectionApiController extends FrontendBaseController
         $query->alias('i');
         $query->select(['s.id as s_id','f.number as number','f.id as facility_id','f.process as process','i.user_info_id as user_info_id','f.head_user as head_user','i.id as i_id','i.status as i_status','i.repair_time as i_repair_time','i.question_type as i_question_type']);
         // $query->select(['f.name as name']);
-        $query->leftJoin(Facility::tabfleName() . ' f', 'i.facility_id = f.id');
+        $query->leftJoin(Facility::tableName() . ' f', 'i.facility_id = f.id');
         $query->leftJoin(InspectionService::tableName() . ' s', 'i.id = s.inspection_id');
         $query->andWhere(['i.facility_id'=> $facility_id]);
         $query->andWhere(['not',['s.end_time' => null]]);
